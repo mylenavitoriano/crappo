@@ -1,0 +1,94 @@
+@import '../../variables.scss';
+
+@mixin display-flex{
+    display: flex;
+    align-items: center;
+}
+
+section.why-crappo{
+    background-image: url(../../assets/backgrounds/bg-why-crappo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    padding: 6.25rem 0;
+
+    .container{
+        max-width: 75rem;
+        margin-inline: auto;
+
+        .cards-number{
+            @include display-flex;
+            justify-content: space-between;
+
+            .card{
+                @include display-flex;
+                gap: 1.5rem;
+
+                .img{
+                    background-color: #252540;
+                    height: 5rem;
+                    width: 5rem;
+                    clip-path: circle(50%);
+                    @include display-flex;
+                    justify-content: center;
+                }
+
+                .texts{
+                    h1 {
+                        color: #FFF;
+                        font-weight: 700;
+                        font-size: 2.5rem;
+                    }
+    
+                    p {
+                        color: $color-grey-5;
+                    }
+                }
+
+            }
+        }
+
+        .block-why-crappo{
+            @include display-flex;
+            justify-content: space-between;
+            margin-top: 6.25rem;
+
+            .texts-why-crappo{
+                max-width: 30rem;
+
+                h1 {
+                    font-size: 2.5rem;
+                    color: #FFF;
+                }
+
+                p {
+                    color: $color-grey-5;
+                    font-weight: 400;
+                    line-height: 1.75rem;
+                    max-width: 25.5rem;
+                    margin: 1.5rem 0 2rem;
+                }
+
+                button{
+                    width: 9.125rem;
+                    padding: 1rem 0;
+                    @include display-flex;
+                    justify-content: center;
+                    gap: 1.5rem;
+                    border-radius: 2rem;
+                    background: $color-accent;
+                    color: #FFF;
+                    font-size: 1.125rem;
+                    font-weight: 500;
+                    transition: all ease .3s;
+    
+                    &:hover{
+                        cursor: pointer;
+                        filter: brightness(0.9);
+                    }
+                }
+            }
+        }
+    }
+}

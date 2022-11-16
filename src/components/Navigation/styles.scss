@@ -1,0 +1,64 @@
+@import '../../variables.scss';
+
+@mixin display-flex{
+    display: flex;
+    align-items: center;
+}
+
+nav{
+    color: #FFF;
+    padding-top: 3.75rem;
+
+    .container-nav{
+        max-width: 75rem;
+        margin-inline: auto;
+        @include display-flex;
+        justify-content: space-between;
+
+        .itens-right{
+            @include display-flex;
+            gap: 3.5rem;
+            
+            .list-nav{
+                ul{
+                    @include display-flex;
+                    gap: 2rem;
+                    list-style: none;
+
+                    li{
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .buttons-login{
+                @include display-flex;
+                gap: 1.5rem;
+
+                p{
+                    font-weight: 500;
+                    padding-right: 1.5rem;
+                    border-right: 1px solid #9c9c9f;
+                    cursor: pointer;
+                }
+
+                button{
+                    font-weight: 500;
+                    border: 0;
+                    width: 8.125rem;
+                    padding: 0.875rem 0;
+                    border-radius: 2rem;
+                    color: #FFF;
+                    background: $color-accent;
+                    transition: all ease .3s;
+
+                    &:hover{
+                        cursor: pointer;
+                        filter: brightness(0.9);
+                    }
+                }
+            }
+        }
+
+    }
+}
