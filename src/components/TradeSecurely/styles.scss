@@ -1,0 +1,123 @@
+@import '../../variables.scss';
+
+.trade-securely{
+    background: $color-light-bg;
+
+    .container{
+        max-width: 75rem;
+        margin-inline: auto;
+        padding: 12.5rem 0;
+
+        h1{
+            font-family: 'Rubik', sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            text-align: center;
+            max-width: 46.25rem;
+            margin-inline: auto;
+        }
+
+        .blocks{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 4rem;
+
+            .block{
+                background: #FFF;
+                width: 23.125rem;
+                padding: 3rem 1.5rem;
+                border-radius: 1rem;
+                box-shadow: 0px 40px 40px #F8F9FE;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: all ease-in-out 1s;
+
+                &:hover{
+                   background: $color-secondary; 
+
+                    p.title, p.description{
+                        color: #FFF
+                    }
+
+                    button{
+                        background: $color-accent;
+                        color: #FFF;
+                        width: fit-content;
+                        padding: 1rem 1rem 1rem 1.5rem;
+                        border-radius: 2rem;
+
+                        p{
+                            display: block;
+                            margin-right: 1.5rem;
+                        }
+
+                        .icon-arrow{
+                            background: #FFF;
+                            width: 2rem;
+                            height: 2rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 50%;
+
+                            img{
+                                width: 0.5rem;
+                            }
+                        }
+                    }
+                }
+
+                p.title{
+                    font-family: 'Rubik', sans-serif;
+                    font-weight: 700;
+                    font-size: 2rem;
+                    color: $color-primary;
+                    line-height: 150%;
+                    margin: 3rem 0 1rem;
+
+                    span{
+                        font-weight: 500;
+                        font-size: 1.125rem;
+                        color: $color-grey-4;
+                    }
+                }
+
+                p.description{
+                    font-family: 'Rubik', sans-serif;
+                    font-weight: 400;
+                    font-size: 1rem;
+                    color: $color-grey-3;
+                    text-align: center;
+                    margin-bottom: 1.5625rem;
+                }
+
+                button{
+                    border: 2px solid rgba(43, 7, 110, 0.2);
+                    border-radius: 50%;
+                    height: 4rem;
+                    width: 4rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all ease-in-out .3s;
+
+                    p{
+                        display: none;
+                        font-size: 1.125rem;
+                        font-family: "Rubik", sans-serif;
+                        font-weight: 500;
+                        color: #FFF;
+                    }
+
+                    &:hover{
+                        cursor: pointer;
+                        filter: brightness(0.9);
+                    }
+                }
+            }
+        }
+    }
+}
